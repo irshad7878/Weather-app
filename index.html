@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>🌤️ Weather App</h1>
+                <p>Check weather anywhere in the world</p>
+            </div>
+
+            <button id="themeBtn">🌙</button>
+        </header>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name e.g. Mumbai"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Message -->
+        <p id="message"></p>
+
+
+        <!-- Current Weather -->
+        <section id="weatherCard" class="weather-card hidden">
+
+            <div class="location">
+                <h2 id="cityName">Mumbai</h2>
+                <p id="countryName">India</p>
+            </div>
+
+
+            <div class="main-weather">
+
+                <div id="weatherIcon" class="weather-icon">
+                    ☀️
+                </div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <p id="condition">Clear</p>
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+            <div class="details">
+
+                <div class="detail-box">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💨</span>
+                    <p>Wind</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>☔</span>
+                    <p>Rain Chance</p>
+                    <strong id="rainChance">--%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 7 Day Forecast -->
+        <section id="forecastSection" class="forecast-section hidden">
+
+            <h2>7-Day Forecast</h2>
+
+            <div id="forecast" class="forecast"></div>
+
+        </section>
+
+
+        <footer>
+            Weather data powered by Open-Meteo
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
